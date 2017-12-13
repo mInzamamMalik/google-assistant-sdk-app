@@ -1,0 +1,35 @@
+{
+  "actions": [
+    {
+      "name": "MAIN",
+      "intent": {
+        "name": "actions.intent.MAIN"
+      },
+      "fulfillment": {
+        "conversationName": "helloSdkBot"
+      }
+    },
+    {
+      "name": "HELLO",
+      "fulfillment": {
+        "conversationName": "helloSdkBot"
+      },
+      "intent": {
+        "name": "action.intent.HELLO",
+        "trigger": {
+          "queryPatterns": [
+            "hey how are you"
+          ]
+        }
+      },
+      "description": "description string",
+      "signInRequired": false
+    }
+  ],
+  "conversations": {
+    "sekaiApp": {
+      "name": "helloSdkBot",
+      "url": "https://us-central1-empty-agent-1fd51.cloudfunctions.net/webhook"
+    }
+    }
+}
